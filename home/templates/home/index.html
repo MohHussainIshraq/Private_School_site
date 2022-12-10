@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  {% include "includes/head.html" %}
+<body>
+  <div class="top_container">
+    <!-- header section strats -->
+    {% include  'includes/header.html' %} 
+  <!-- end header section -->
+   
+  <!-- about section -->
+  {% include "includes/about.html" %}
+  <!-- about section -->
+
+  <!-- teacher section -->
+  {% include "includes/teacher.html" %}
+  <!-- teacher section -->
+  
+  <!-- vehicle section -->
+  {% include "includes/vehicle.html" %}
+  <!-- vehicle section -->
+
+  <!-- client section -->
+  {% include "includes/client.html" %}
+  <!-- client section -->
+
+  <!-- contact section -->
+  {% include "includes/contact.html" %}
+  <!-- end contact section -->
+
+  <!-- admission section -->
+  {% include "includes/admission.html" %}
+  <!-- admission section -->
+
+
+  <!-- landing section -->
+  {% include "includes/landing.html" %}
+  <!-- end landing section -->
+
+  <!-- footer section -->
+  {% include "includes/footer.html" %}
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+  <script>
+    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+    // Australia.
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+      });
+
+      var image = 'images/maps-and-flags.png';
+      var beachMarker = new google.maps.Marker({
+        position: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+  </script>
+  <!-- end google map js -->
+</body>
+
+</html>

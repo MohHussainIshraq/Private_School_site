@@ -1,0 +1,36 @@
+{% load static %}
+
+<section class="vehicle_section layout_padding">
+    <div class="container">
+      <h2 class="main-heading ">
+        {{ vehicles.title_name_of_vehicles }}
+      </h2>
+      <p class="text-center">
+        {{ vehicles.description }}
+      </p>
+      <div class="layout_padding-top">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% for machin in kind_ve %}
+            </div>
+            <div class="carousel-item">
+              <div class="vehicle_img-box ">
+                <img src="{{ machin.image.url }}" alt="" class="img-fluid w-100">
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>

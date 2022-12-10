@@ -1,0 +1,35 @@
+{% load static %}
+
+<section class="client_section layout_padding">
+    <div class="container">
+      <h2 class="main-heading ">
+        {{ student.student_title }}
+      </h2>
+      <p class="text-center">
+        {{ student.description }}
+      </p>
+      <div class="layout_padding2">
+        <div class="client_container d-flex flex-column">
+          <div class="client_detail d-flex align-items-center">
+            <div class="client_img-box ">
+              <img src="{{ info_student.image.url }}" alt="">
+            </div>
+            <div class="client_detail-box">
+              <h4>
+                {{ info_student.name }}
+              </h4>
+              <span>
+                {{ info_student.title }}
+              </span>
+            </div>
+          </div>
+          <div class="client_text mt-4">
+            <p>
+              {{ info_student.description }}
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

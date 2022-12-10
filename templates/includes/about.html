@@ -1,0 +1,24 @@
+{% load static %}
+
+<section class="about_section layout_padding">
+    <div class="container">
+      <h2 class="main-heading ">
+        {{ about.title }}
+      </h2>
+      <p class="text-center">
+        {{ about.description }}
+      </p>
+      <div class="about_img-box ">
+        <img src="{{ about.image.url }}" alt="" class="img-fluid w-100">
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <a href="{% url 'home:main' %}" class="call_to-btn  ">
+
+          <span>
+            Read More
+          </span>
+          <img src="{% static 'images/right-arrow.png' %}" alt="">
+        </a>
+      </div>
+    </div>
+  </section>
